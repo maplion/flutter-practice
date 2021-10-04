@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/question.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,18 +39,27 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(
-              questions[_questionIndex],
+            Question(
+              questionText: questions[_questionIndex],
             ),
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+              ),
               onPressed: () => _answerQuestion(questions.length),
               child: const Text('Answer 1'),
             ),
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+              ),
               onPressed: () => _answerQuestion(questions.length),
               child: const Text('Answer 2'),
             ),
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+              ),
               onPressed: () => _answerQuestion(questions.length),
               child: const Text('Answer 3'),
             ),
